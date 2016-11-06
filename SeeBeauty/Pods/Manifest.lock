@@ -1,21 +1,21 @@
 PODS:
-  - Alamofire (3.5.0)
+  - Alamofire (4.0.0)
   - Kingfisher (3.1.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 4.0)
   - Kingfisher
   - MJExtension
   - MJRefresh
 
 SPEC CHECKSUMS:
-  Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
   Kingfisher: 7779f22e977393e9533a89a9685beb8f679d3767
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
 
-PODFILE CHECKSUM: be0e1b8141355bc3dc193add3ea1062e0bcb7300
+PODFILE CHECKSUM: 57649233178333283b0d686fd52677ed9066b964
 
 COCOAPODS: 1.0.1
