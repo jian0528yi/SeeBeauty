@@ -1,0 +1,6 @@
+framework module Pods_SeeBeauty {
+  umbrella header "Pods-SeeBeauty-umbrella.h"
+
+  export *
+  module * { export * }
+}
