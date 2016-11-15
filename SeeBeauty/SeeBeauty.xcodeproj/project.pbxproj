@@ -12,6 +12,7 @@
 		2B2EEE001DD0A77F00951EFA /* LBCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2EEDFF1DD0A77F00951EFA /* LBCollectionViewFlowLayout.swift */; };
 		2B2EEE021DD0A86300951EFA /* LBCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2EEE011DD0A86300951EFA /* LBCommon.swift */; };
 		2B2EEE041DD0AC0800951EFA /* LBImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2EEE031DD0AC0800951EFA /* LBImage.swift */; };
+		2B3933581DDB422600BB4D79 /* LBImageBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3933571DDB422600BB4D79 /* LBImageBrowser.swift */; };
 		2BF1B5A51DCF5E0500817251 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF1B5A41DCF5E0500817251 /* AppDelegate.swift */; };
 		2BF1B5AA1DCF5E0500817251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1B5A81DCF5E0500817251 /* Main.storyboard */; };
 		2BF1B5AC1DCF5E0500817251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BF1B5AB1DCF5E0500817251 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		2B2EEE011DD0A86300951EFA /* LBCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBCommon.swift; sourceTree = "<group>"; };
 		2B2EEE031DD0AC0800951EFA /* LBImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBImage.swift; sourceTree = "<group>"; };
 		2B2EEE051DD0B90A00951EFA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		2B3933571DDB422600BB4D79 /* LBImageBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBImageBrowser.swift; sourceTree = "<group>"; };
 		2BF1B5A11DCF5E0500817251 /* SeeBeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeBeauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF1B5A41DCF5E0500817251 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BF1B5A91DCF5E0500817251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				2B2EEDFD1DD0A71000951EFA /* LBCollectionViewCell.swift */,
 				2B2EEDFF1DD0A77F00951EFA /* LBCollectionViewFlowLayout.swift */,
 				2B2EEE031DD0AC0800951EFA /* LBImage.swift */,
+				2B3933571DDB422600BB4D79 /* LBImageBrowser.swift */,
 				2B2EEE011DD0A86300951EFA /* LBCommon.swift */,
 				2B2EEE051DD0B90A00951EFA /* Bridging-Header.h */,
 				2BF1B5A41DCF5E0500817251 /* AppDelegate.swift */,
@@ -237,6 +240,7 @@
 				2B2EEE021DD0A86300951EFA /* LBCommon.swift in Sources */,
 				2BF1B5A51DCF5E0500817251 /* AppDelegate.swift in Sources */,
 				2B2EEE041DD0AC0800951EFA /* LBImage.swift in Sources */,
+				2B3933581DDB422600BB4D79 /* LBImageBrowser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

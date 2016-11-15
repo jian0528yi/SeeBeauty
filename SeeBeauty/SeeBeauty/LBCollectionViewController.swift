@@ -12,14 +12,16 @@ import Alamofire
 
 private let reuseIdentifier = "LBCollectionViewCell"
 
-class LBCollectionViewController: UICollectionViewController {
+class LBCollectionViewController: UICollectionViewController, LBImageBrowserDelegate {
 
     @IBOutlet weak var layout: LBCollectionViewFlowLayout!
     var images = NSMutableArray()
+    var browserView: LBImageBrowser!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "看美女"
         self.layout.columnCount = 2
 
         let nib = UINib(nibName: "LBCollectionViewCell", bundle: Bundle.main)
@@ -67,34 +69,23 @@ class LBCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDelegate
 
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        let rect = self.view?.convert((cell?.frame)!, from: self.collectionView)
+        let image = self.images[indexPath.item] as! LBImage
+        self.browserView = LBImageBrowser(frame: self.view.bounds, originRect: rect!, image: image)
+        self.browserView.delegate = self
+        self.view.addSubview(self.browserView!)
+        self.browserView?.showBrowser();
 
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
+        self.navigationController?.navigationBar.isHidden = true
     }
 
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
+    // MARK: - LBImageBrowserDelegate
 
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
+    func showNavigationBar() {
+        self.navigationController?.navigationBar.isHidden = false
     }
-    */
 
     // MARK: - 自定义方法
 

@@ -20,10 +20,10 @@ class LBCollectionViewCell: UICollectionViewCell {
         }
 
         set(newImage) {
-            title?.text = newImage.title
+            title.text = newImage.title
 
             let url = URL(string: newImage.img)
-            imageView?.kf.setImage(with: url)
+            imageView.kf.setImage(with: url)
         }
     }
 }
