@@ -71,6 +71,7 @@ class LBImageBrowser: UIView, UIScrollViewDelegate {
         switchScrollView.contentSize = CGSize(width: SCREEN_WIDTH, height: UIScreen.main.bounds.height)
         switchScrollView.addSubview(self.scaleScrollView)
         switchScrollView.addSubview(self.titleLabel)
+        switchScrollView.addSubview(self.btnSave)
 
         UIView.animate(withDuration: 0.3, animations: { () -> Void in
             self.switchScrollView.alpha = 1.0
@@ -101,6 +102,19 @@ class LBImageBrowser: UIView, UIScrollViewDelegate {
         } else {
             self.scaleScrollView.zoom(to: CGRect(x: touchPoint.x, y: touchPoint.y, width: 1, height: 1), animated: true)
         }
+    }
+
+    @objc private func save() {
+        var image: UIImage? = nil
+        image = self.imageView.image
+
+        if image != nil {
+            UIImageWriteToSavedPhotosAlbum(image!, self, #selector(self.saveImageDone(_:error:context:)), nil)
+        }
+    }
+
+    @objc func saveImageDone(_ image : UIImage, error: Error, context: UnsafeMutableRawPointer?) {
+        print("图片已保存")
     }
 
     // MARK: - UIScrollViewDelegate
@@ -168,5 +182,18 @@ class LBImageBrowser: UIView, UIScrollViewDelegate {
         titleLabel.text = self.image.title
         return titleLabel
     } ()
+
+    // 保存按钮
+
+    lazy var btnSave: UIButton = {
+        let width: CGFloat = 80
+        let height: CGFloat = 40
+        let x = SCREEN_WIDTH - width - 10
+        let y = SCREEN_HEIGHT - height - 10
+        let btnSave = UIButton(frame: CGRect(x: x, y: y, width: width, height: height))
+        btnSave.addTarget(self, action: #selector(save), for: .touchUpInside)
+        btnSave.setTitle("保 存", for: .normal)
+        return btnSave
+    }()
 
 }
